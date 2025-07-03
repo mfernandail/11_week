@@ -15,10 +15,7 @@ function searchMovie(e) {
 }
 
 async function fetchMovie(title) {
-  const url = `https://www.omdbapi.com/?apikey=${API_KEY}&s=${title}`
-
-  const response = await fetch(url)
-  const data = await response.json()
-
+  const res = await fetch(`/api/search?query=${encodeURIComponent(title)}`)
+  const data = await res.json()
   console.log(data)
 }
