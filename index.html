@@ -53,13 +53,28 @@
         />
         <button type="submit" class="form_btn">Search</button>
       </form>
+
+      <div id="loader" class="loader" style="display: none">Loading...</div>
+
+      <section id="results" class="results-grid"></section>
+      
     </main>
 
     <footer>
       <p>2025 - Maria Fernanda</p>
     </footer>
 
-    <!-- <script src="./config.js"></script> -->
+    <script>
+      const isLocal =
+        location.hostname === "127.0.0.1" || location.hostname === "localhost"
+
+      if (isLocal) {
+        const script = document.createElement("script")
+        script.src = "config.js"
+        document.head.appendChild(script)
+      }
+    </script>
+
     <script src="./script.js"></script>
   </body>
 </html>

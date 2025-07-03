@@ -14,8 +14,15 @@ function searchMovie(e) {
   fetchMovie('mulan')
 }
 
+const isLocalDev =
+  location.hostname === '127.0.0.1' || location.hostname === 'localhost'
+
 async function fetchMovie(title) {
-  const res = await fetch(`/api/search?query=${encodeURIComponent(title)}`)
+  const url = isLocalDev
+    ? `https://www.omdbapi.com/?apikey=${API_KEY}&s=${title}`
+    : `/api/search?query=${encodeURIComponent(title)}`
+
+  const res = await fetch(url)
   const data = await res.json()
   console.log(data)
 }
