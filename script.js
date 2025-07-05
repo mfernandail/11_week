@@ -35,6 +35,8 @@ function createCardMovie(title, data) {
   const oldCard = document.querySelector('.result_card')
   if (oldCard) oldCard.remove()
 
+    console.log(data)
+
   data.forEach((movie) => {
     const card = document.createElement('article')
     card.classList.add('result_card')
