@@ -62,3 +62,15 @@ main {
   background-color: #fff;
   color: #0473a6;
 }
+
+.results-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0;
+  gap: 20px;
+  justify-content: center;
+  
+}
+.result_card {
+  width: 100px;
+}
