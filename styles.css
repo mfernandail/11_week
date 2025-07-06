@@ -81,8 +81,13 @@ main {
   border-radius: 20px;
   margin-top: 15px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-
   opacity: 0.9;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.card_image:hover {
+  opacity: 1;
+  transform: scale(1.3);
 }
 
 .result_card {
@@ -94,13 +99,29 @@ main {
   gap: 1rem;
   align-items: center;
   justify-content: center;
-  margin: 1rem;
-
+  margin: 2.5rem;
 }
 
 .pagination button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.btn_pagination {
+  padding: 3px 6px;
+  background-color: #0473a6;
+  border: none;
+  border-radius: 0 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn_pagination:hover {
+  background-color: #033953;
+}
+
+#pageInfo {
+  color: #0473a6;
 }
 
 .hideBtn {
