@@ -1,4 +1,4 @@
-export default async function handler(req, res, page = 1) {
+export default async function handler(req, res) {
   const { query, page = 1 } = req.query
   const API_KEY = process.env.OMDB_API_KEY
 
