@@ -6,13 +6,14 @@
 
 ### 🧠 What I learned this week:
 
-✅ Consuming external APIs using vanilla JavaScript.  
-✅ Using `fetch()` with error handling.  
-✅ Implemented pagination to navigate through multiple pages of results.
-✅ Environment detection to securely manage API keys  
-✅ Visual effects with CSS.  
-✅ Input validation and conditional rendering.  
-✅ Applying `text-overflow`, truncating long titles and showing full text on hover.
+- Consuming external APIs using vanilla JavaScript.
+- Using `fetch()` with error handling. 
+- Implemented pagination to navigate through multiple pages of results.  
+- Environment detection to securely manage API keys.
+- Visual effects with CSS.
+- Input validation and conditional rendering.
+- Applying `text-overflow`, truncating long titles and showing full text on hover.
+
 ---
 
 ### 💻 Mini Project: Movie Search App 🎬

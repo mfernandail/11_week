@@ -55,7 +55,7 @@ async function fetchMovie(title, page = 1) {
       return
     }
 
-    createCardMovie(title, data.Search)
+    createCardMovie(data.Search)
 
     totalPages = Math.ceil(data.totalResults / 10)
 
@@ -69,7 +69,7 @@ async function fetchMovie(title, page = 1) {
   }
 }
 
-function createCardMovie(title, data) {
+function createCardMovie(data) {
   result.innerHTML = ''
 
   data.forEach((movie) => {
@@ -99,6 +99,7 @@ prevBtn.addEventListener('click', () => {
   if (currentPage > 1) {
     currentPage--
     fetchMovie(currentQuery, currentPage)
+    console.log('-')
   }
 })
 
@@ -106,5 +107,6 @@ nextBtn.addEventListener('click', () => {
   if (currentPage < totalPages) {
     currentPage++
     fetchMovie(currentQuery, currentPage)
+    console.log('+')
   }
 })
