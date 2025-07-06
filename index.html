@@ -57,7 +57,12 @@
       <div id="loader" class="loader" style="display: none">Loading...</div>
 
       <section id="results" class="results-grid"></section>
-      
+
+      <div id="pagination" class="pagination hideBtn">
+        <button id="prevBtn">⟨ Prev</button>
+        <span id="pageInfo">Page 1</span>
+        <button id="nextBtn">Next ⟩</button>
+      </div>
     </main>
 
     <footer>
@@ -70,7 +75,7 @@
 
       if (isLocal) {
         const script = document.createElement("script")
-        script.src = "config.js"
+        script.src = "./config.js"
         document.head.appendChild(script)
       }
     </script>
