@@ -46,10 +46,12 @@ async function fetchMovie(title, page = 1) {
     const data = await res.json()
 
     if (data.Response === 'False') {
-      result.innerHTML = `<p>No se encontraron resultados para <strong>${title}</strong>.</p>`
+      result.innerHTML = `<p>No results were found for <strong>${title}</strong>.</p>`
+      pagination.classList.add('hideBtn')
       pageInfo.textContent = ''
       prevBtn.disabled = true
       nextBtn.disabled = true
+
       return
     }
 
@@ -62,7 +64,8 @@ async function fetchMovie(title, page = 1) {
     pagination.classList.remove('hideBtn')
   } catch (e) {
     console.error('Error al buscar película:', e)
-    result.innerHTML = `<p>Error al cargar resultados. Intenta más tarde.</p>`
+    result.innerHTML = `<p>Error loading results. Please try again later.</p>`
+    pagination.classList.add('hideBtn')
   }
 }
 
@@ -80,7 +83,7 @@ function createCardMovie(title, data) {
 
     card.innerHTML = `
       <h1 class="card_title">${movie.Title}</h1>
-      <img src=${poster} alt=${movie.title} width=150 class="card_image" />
+      <img src=${poster} alt=${movie.Title} class="card_image" onerror="this.onerror=null; this.src='./images/no_found.png';" />
     `
     result.appendChild(card)
   })
