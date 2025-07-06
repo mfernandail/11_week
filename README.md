@@ -2,27 +2,27 @@
 
 ## Step by step, line by line — becoming a Full Stack Developer in one year.
 
-✅ **HTML**  
-- Semantic structure for the search interface  
-- Form with text input and search button  
+📅 Week 11 completed – Functional project for searching movies using the OMDb API.
 
-✅ **CSS**  
-- Visual styling for result cards  
-- Responsive layout with Flexbox or Grid  
-- Loading indicator (`loader`)  
+### 🧠 What I learned this week:
 
-✅ **JavaScript**  
-- API consumption using `fetch()`  
-- `async/await` and promise handling  
-- Dynamic content rendering  
-- Input validation and error management  
-- Search by keyword
-- (Bonus) Filter by type and details button
-
+✅ Consuming external APIs using vanilla JavaScript.  
+✅ Using `fetch()` with error handling.  
+✅ Implemented pagination to navigate through multiple pages of results.
+✅ Environment detection to securely manage API keys  
+✅ Visual effects with CSS.  
+✅ Input validation and conditional rendering.  
+✅ Applying `text-overflow`, truncating long titles and showing full text on hover.
 ---
 
-## 💻 Mini project of the week:  
-🎬 **Movie Search App using OMDb API**  
-A web application that lets users search for movies, series, or episodes by name using the OMDb API.  
-Results are displayed as cards showing poster, title, type, and year.  
-Includes input validation, error handling, and asynchronous data loading.
+### 💻 Mini Project: Movie Search App 🎬
+
+Web app that allows searching for movies using the OMDb API. Displays dynamic movie cards with visual effects. A great project to practice API consumption and DOM manipulation using OMDb's public API. It features:
+
+- Search input field  
+- Dynamic rendering of results  
+- Placeholder for missing posters
+- Supports both local development and production deployment
+
+🔑 API key is handled conditionally via a local `config.js` file only when in development (`localhost`).
+
